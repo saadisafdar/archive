@@ -1,30 +1,7 @@
-# 🧠 Practice
+# Archive
 
-This repository contains my daily coding practice including:
+This repository contains a collection of my old work, university coursework, and school/lab tasks from different stages of learning and development.
 
-- Algorithms
-- Data Structures
-- Logic building
-- Problem solving
+It includes personal projects, academic assignments, experiments, and practice code saved over time. The purpose of this archive is to preserve progress, track learning, and keep older work organized in one place.
 
-🎯 Goal: Improve problem-solving and coding efficiency.
-
-# 💼 Work
-
-This repository includes:
-
-- University assignments
-- Academic projects
-- Professional tasks
-- Research work
-
-🎯 Goal: Maintain structured academic & professional development.
-# 🌐 Web Development
-
-This repository contains:
-
-- HTML, CSS, JavaScript projects
-- UI/UX designs
-- Responsive websites
-
-🎯 Goal: Build modern, fast, and responsive web applications.
+This is mainly a historical and educational archive rather than a single finished project.
