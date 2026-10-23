@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cascade Puzzle</title>
+  <style>
+    h1{
+      color: darkblue;
+      border-bottom: 2px solid darkblue;
+    }
+    p {
+      color: grey;
+    }
+    h2 {
+      color: blue;
+    }
+    .note {
+      background-color: #fff9d6;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .blue-text {
+      color: blue;
+    }
+    #teal-text {
+      color: teal;
+      font-weight: bold;
+    }
+    p em {
+      color: blue;
+    }
+  </style>
+  <link rel="stylesheet" href="task1_style.css">
+</head>
+<body>
+  <h1>CSS Cascade Puzzle</h1>
+
+  <h2>Purple: both sheets set h2, and the external sheet is linked later.</h2>
+  <p>Grey: the internal p rule.</p>
+
+  <div class="note">
+    Yellow background from the internal .note, border from the external .note.
+  </div>
+
+  <div class="note" style="color: crimson;">
+    Crimson: an inline style beats both sheets.
+  </div>
+
+  <p class="blue-text">Blue: a class beats the p element rule.</p>
+  <p id="teal-text" class="blue-text">Teal and bold: the id beats the class.</p>
+  <p class="important-override" style="color: red;">
+    Orange: !important in the external sheet beats even this inline style.
+  </p>
+
+  <p class="box">Light blue box: p.box styles paragraphs with class box ...</p>
+  <div class="box">... but not this div, which also has class box.</div>
+
+  <p>Inside this grey paragraph, this <span>span inherits the grey colour</span> and <em>this em is blue</em>.</p>
+</body>
+</html>

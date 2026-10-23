@@ -1,0 +1,18 @@
+h2 {
+  color: #800080;
+}
+
+.note {
+  border: 1px solid #d4b106;
+}
+
+.important-override {
+  color: orange !important;
+}
+
+p.box {
+  background-color: #ebf3ff;
+  border: 1px solid #709ad1;
+  padding: 10px;
+  border-radius: 2px;
+}

@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8ecef;
+  color: #333333;
+  margin: 0;
+  padding: 30px;
+}
+
+.cv-container {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Header with absolute circular profile photo */
+header {
+  position: relative;
+  background-color: #1f4e79;
+  color: #ffffff;
+  padding: 25px 30px;
+  min-height: 90px;
+}
+
+header h1 {
+  margin: 0 0 4px 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+header p.sub-title {
+  margin: 0 0 15px 0;
+  font-size: 13px;
+  color: #cce0f5;
+}
+
+/* Email link styled as a pill badge with hover state */
+header a.email-link {
+  display: inline-block;
+  color: #1f4e79;
+  background-color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+header a.email-link:hover {
+  background-color: #ffd700; /* Yellow highlight when mouse is on email */
+  color: #1f4e79;
+}
+
+/* Absolute round profile picture */
+.profile-photo {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+  background-color: #d9c3e6;
+}
+
+/* Two-column layout */
+.content {
+  display: flex;
+  padding: 20px 30px;
+}
+
+.left-column {
+  width: 35%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.right-column {
+  width: 65%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+/* Section Headings */
+h3 {
+  color: #1f4e79;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #1f4e79;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.left-column h3:first-child,
+.right-column h3:first-child {
+  margin-top: 0;
+}
+
+/* Contact info */
+.contact-info p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #444444;
+}
+
+/* Skill badges */
+.skills-container {
+  margin-top: 5px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #dbe4f3;
+  color: #1f4e79;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin: 3px 2px 3px 0;
+}
+
+/* Lists */
+ul {
+  margin: 5px 0 15px 18px;
+  padding: 0;
+  font-size: 13px;
+  color: #333333;
+}
+
+ul li {
+  margin-bottom: 4px;
+}
+
+/* Education row alignment */
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.edu-item .year {
+  color: #888888;
+  font-size: 12px;
+}
+
+.about-text {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 11px;
+  color: #888888;
+  padding: 12px;
+  border-top: 1px solid #e0e0e0;
+}
