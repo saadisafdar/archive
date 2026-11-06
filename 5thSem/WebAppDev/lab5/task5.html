@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UW CS Society</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">UW CS Society</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <h1 class="display-5 fw-bold">Learn. Build. Share.</h1>
+            <p class="lead col-md-8">The Computer Science Society runs hands-on workshops, coding contests and mentoring
+                circles for every student of the department.</p>
+            <a class="btn btn-primary" href="task3.html">Join the Society</a>
+        </div>
+
+        <h2 id="events" class="mt-5 mb-3">Upcoming Events</h2>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>22 Oct 2026</td>
+                    <td>Git and GitHub Workshop</td>
+                    <td>Lab 3</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>5 Nov 2026</td>
+                    <td>Web Design Contest</td>
+                    <td>Seminar Hall</td>
+                </tr>
+                <tr>
+                    <td>19 Nov 2026</td>
+                    <td>Alumni Talk: Life as a Developer</td>
+                    <td>Auditorium</td>
+                </tr>
+                <tr>
+                    <td>3 Dec 2026</td>
+                    <td>24-hour Hackathon</td>
+                    <td>CS Block</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="contact" class="mt-5 mb-3">Quick Contact</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="cname" class="form-label">Name</label>
+                <input type="text" class="form-control" id="cname" name="name">
+            </div>
+            <div class="col-md-6">
+                <label for="cemail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="cemail" name="email">
+            </div>
+            <div class="col-12">
+                <label for="cmsg" class="form-label">Message</label>
+                <textarea class="form-control" id="cmsg" name="message" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2026 UW CS Society
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
