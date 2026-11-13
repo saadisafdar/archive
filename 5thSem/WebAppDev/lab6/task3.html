@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 - Grade Card Generator</title>
+</head>
+<body>
+
+  <h2>Grade Card Generator</h2>
+  <input type="text" id="sName" placeholder="Student name"><br><br>
+  <input type="number" id="sMarks" placeholder="Marks (0-100)"><br><br>
+  <button onclick="showGrade()">Show Grade</button>
+
+  <div id="card" style="display: none; margin-top: 20px; padding: 24px; border-radius: 12px; text-align:center; font-family:Arial; width: 300px;">
+    <h2 id="cardName"></h2>
+    <p id="cardMarks" style="font-size: 48px; font-weight: bold; margin:8px 0;"></p>
+    <p id="cardGrade" style="font-size: 24px;"></p>
+    <p id="cardMsg"></p>
+  </div>
+
+  <script>
+    function showGrade() {
+      let name = document.getElementById("sName").value;
+      let marks = Number(document.getElementById("sMarks").value);
+      let card = document.getElementById("card");
+
+      let grade = "";
+      let bgColor = "";
+
+      if (marks >= 80) {
+        grade = "Grade: A";
+        bgColor = "#27ae60";
+      } else if (marks >= 65) {
+        grade = "Grade: B";
+        bgColor = "#2980b9";
+      } else if (marks >= 50) {
+        grade = "Grade: C";
+        bgColor = "#e67e22";
+      } else {
+        grade = "Grade: F";
+        bgColor = "#e74c3c";
+      }
+
+      let message = (marks >= 85) ? "Scholarship Eligible" : "Keep it up!";
+
+      document.getElementById("cardName").innerText = name;
+      document.getElementById("cardMarks").innerText = marks;
+      document.getElementById("cardGrade").innerText = grade;
+      document.getElementById("cardMsg").innerText = message;
+
+      card.style.background = bgColor;
+      card.style.color = "white";
+      card.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
