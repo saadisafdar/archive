@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Lab</title>
+</head>
+
+<body>
+    <script>
+        let marks = 85;
+        let bonus = 7;
+        let total = 100;
+
+        let finalMarks = marks + bonus;
+        let percentage = (finalMarks / total) * 100;
+        let result = (percentage >= 50) ? "Pass" : "Fail";
+        let divisibleBy5 = (finalMarks % 5 === 0);
+
+        console.log("Final marks:", finalMarks);
+        console.log("Percentage: " + percentage + "%");
+        console.log("Result:", result);
+        console.log("Divisible by 5:", divisibleBy5);
+    </script>
+</body>
+
+</html>

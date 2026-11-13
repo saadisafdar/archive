@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 - Student Profile Card Generator</title>
+</head>
+<body>
+
+  <h2>Student Profile Generator</h2>
+  <input type="text" id="first" placeholder="First name"><br><br>
+  <input type="text" id="last" placeholder="Last name"><br><br>
+  <input type="number" id="marks" placeholder="Marks (0-100)"><br><br>
+  <input type="number" id="weight" placeholder="Weight (kg)"><br><br>
+  <input type="number" id="height" step="0.01" placeholder="Height (m), e.g. 1.72"><br><br>
+  <button onclick="generateCard()">Generate Card</button>
+
+  <div id="profile" style="margin-top: 20px;"></div>
+
+  <script>
+    function fullName(first, last) {
+      return `${first} ${last}`;
+    }
+
+    function bmi(weightKg, heightM) {
+      let result = weightKg / (heightM ** 2);
+      return result.toFixed(2);
+    }
+
+    const gradeLabel = (marks) => {
+      if (marks >= 80) return "A";
+      else if (marks >= 65) return "B";
+      else if (marks >= 50) return "C";
+      else return "F";
+    };
+
+    function generateCard() {
+      let first = document.getElementById("first").value;
+      let last = document.getElementById("last").value;
+      let marks = Number(document.getElementById("marks").value);
+      let weight = Number(document.getElementById("weight").value);
+      let height = Number(document.getElementById("height").value);
+
+      let studentFullName = fullName(first, last);
+      let studentBMI = bmi(weight, height);
+      let grade = gradeLabel(marks);
+
+      let bgColor = "";
+      if (grade === "A") bgColor = "#27ae60";
+      else if (grade === "B") bgColor = "#2980b9";
+      else if (grade === "C") bgColor = "#e67e22";
+      else bgColor = "#e74c3c";
+
+      let profileDiv = document.getElementById("profile");
+      profileDiv.innerHTML = `
+        <div style="background: ${bgColor}; color: white; padding: 24px; border-radius: 12px; width: 300px; text-align: center; font-family: Arial, sans-serif;">
+          <h2 style="margin-top: 0;">${studentFullName}</h2>
+          <p style="font-size: 18px; margin: 10px 0;">${marks}/100 &nbsp; Grade: ${grade}</p>
+          <p style="font-size: 16px; margin-bottom: 0;">BMI: ${studentBMI}</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
