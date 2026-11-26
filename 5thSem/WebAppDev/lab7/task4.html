@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Task List</title>
+</head>
+<body>
+  <h2>My Task List</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let text = input.value.trim();
+
+      if (text === "") {
+        return;
+      }
+
+      let li = document.createElement("li");
+      li.innerText = text;
+      li.onclick = function () {
+        li.remove();
+      };
+
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Switcher Card</title>
+</head>
+<body>
+  <div id="card" style="width: 280px; padding:30px; border-radius:12px; border: 3px solid #333; text-align:center; font-family:Arial;">
+    <h2 id="cardName">Saadi Safdar</h2>
+    <p id="cardRole">CS Student</p>
+    <p id="cardMsg">Select a theme below</p>
+  </div>
+
+  <div style="margin-top:12px;">
+    <button onclick="applyTheme('ocean')">Ocean</button>
+    <button onclick="applyTheme('sunset')">Sunset</button>
+    <button onclick="applyTheme('forest')">Forest</button>
+    <button onclick="applyTheme('night')">Night</button>
+    <button onclick="applyTheme('candy')">Candy</button>
+  </div>
+
+  <script>
+    let themes = {
+      ocean:  { bg: "steelblue", text: "white", border: "navy" },
+      sunset: { bg: "coral",     text: "white", border: "orangered" },
+      forest: { bg: "seagreen",  text: "white", border: "darkgreen" },
+      night:  { bg: "#1e1e1e",   text: "white", border: "#555555" },
+      candy:  { bg: "hotpink",   text: "white", border: "deeppink" }
+    };
+
+    function applyTheme(name) {
+      let t = themes[name];
+      let card = document.getElementById("card");
+      card.style.backgroundColor = t.bg;
+      card.style.color = t.text;
+      card.style.borderColor = t.border;
+      document.getElementById("cardMsg").innerText = "Theme: " + name;
+    }
+  </script>
+</body>
+</html>

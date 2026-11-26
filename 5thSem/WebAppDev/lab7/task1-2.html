@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let students = ["Ali", "Sara", "Ahmed"];
+
+        students.push("Bilal", "Hina");
+        console.log("After push x2:", students);
+
+        students.pop();
+        console.log("After pop:", students);
+
+        students.unshift("Zara");
+        console.log("After unshift:", students);
+
+        console.log("Final roster:");
+        let i = 1;
+        for (let student of students) {
+            console.log(i + ". " + student);
+            i++;
+        }
+
+        let course = {
+            name: "Web Application Development",
+            code: "CS-371",
+            credits: 3,
+            students: 42,
+            instructor: "Dr. Saad",
+            describe: function () {
+                console.log(
+                    this.code + " | " + this.name + " | " + this.credits + " credits | Instructor: " + this.instructor + " | Students: " + this.students
+                );
+            }
+        };
+
+        course.describe();
+
+        course.students = 45;
+        course.describe();
+    </script>
+</body>
+
+</html>
